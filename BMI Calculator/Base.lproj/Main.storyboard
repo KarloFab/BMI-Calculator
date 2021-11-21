@@ -20,14 +20,14 @@
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Calculate Your BMI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koc-E0-TMy">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="548"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="557"/>
                                         <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-Sp-7ZU">
-                                        <rect key="frame" x="0.0" y="558" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="567" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-jX-CHq">
                                                 <rect key="frame" x="0.0" y="0.0" width="50.5" height="30"/>
@@ -47,13 +47,13 @@
                                         </constraints>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="n51-PT-wAn">
-                                        <rect key="frame" x="-2" y="598" width="378" height="51"/>
+                                        <rect key="frame" x="-2" y="607" width="378" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9qN-ZU-xPd"/>
                                         </constraints>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jBc-Q1-ppP">
-                                        <rect key="frame" x="0.0" y="658" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="667" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IM-xK-H6t">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
@@ -73,16 +73,16 @@
                                         </constraints>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="20" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-OQ-30f">
-                                        <rect key="frame" x="-2" y="698" width="378" height="51"/>
+                                        <rect key="frame" x="-2" y="707" width="378" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iqN-q6-FPd"/>
                                         </constraints>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-Py-OZG">
-                                        <rect key="frame" x="0.0" y="758" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="767" width="374" height="51"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="bnR-oH-2Vl"/>
+                                            <constraint firstAttribute="height" constant="51" id="bnR-oH-2Vl"/>
                                         </constraints>
                                         <state key="normal" title="Calculate"/>
                                     </button>
@@ -102,6 +102,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cuF-Y0-kna">
+            <objects>
+                <viewController id="8eO-JS-sJY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUB-AO-dmN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-PE-whI">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7m3-5A-OL9"/>
+                                </constraints>
+                                <state key="normal" title="Calculate"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kpp-J2-vcx">
+                                <rect key="frame" x="97.5" y="386" width="219" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbM-nD-SuK">
+                                        <rect key="frame" x="30" y="0.0" width="159.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-Xx-va4">
+                                        <rect key="frame" x="62.5" y="38" width="94" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EAT MORE SNACKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-gW-WVp">
+                                        <rect key="frame" x="0.0" y="94" width="219" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0dt-jW-1Kv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zFY-PE-whI" firstAttribute="leading" secondItem="eUB-AO-dmN" secondAttribute="leadingMargin" id="JaZ-xU-zKg"/>
+                            <constraint firstItem="0dt-jW-1Kv" firstAttribute="bottom" secondItem="zFY-PE-whI" secondAttribute="bottom" id="M1f-q2-bYr"/>
+                            <constraint firstItem="Kpp-J2-vcx" firstAttribute="centerY" secondItem="eUB-AO-dmN" secondAttribute="centerY" id="cVt-S3-30J"/>
+                            <constraint firstItem="Kpp-J2-vcx" firstAttribute="centerX" secondItem="eUB-AO-dmN" secondAttribute="centerX" id="dAX-y4-YtE"/>
+                            <constraint firstItem="zFY-PE-whI" firstAttribute="trailing" secondItem="eUB-AO-dmN" secondAttribute="trailingMargin" id="zct-VK-ZOb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLJ-nV-7tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811.59420289855075" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

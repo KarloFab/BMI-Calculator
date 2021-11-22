@@ -9,11 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var height: UILabel!
+    @IBOutlet weak var weight: UILabel!
+    
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func heightSliderChanged(_ sender: UISlider) {
+        height.text = "\(String(format: "%.2f", sender.value)) m"
+    }
+    
+    @IBAction func weightSliderChanged(_ sender: UISlider) {
+        weight.text = "\(Int(sender.value)) KG"
+    }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        let height = heightSlider.value
+        let weight = weightSlider.value
+        
+        let bmi = weight / pow(height, 2)
+        print(bmi)
+    }
 }
 

@@ -46,11 +46,14 @@
                                             <constraint firstAttribute="height" constant="30" id="pWI-G0-RU5"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="n51-PT-wAn">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="n51-PT-wAn">
                                         <rect key="frame" x="-2" y="607" width="378" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9qN-ZU-xPd"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wXe-Re-zeI"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jBc-Q1-ppP">
                                         <rect key="frame" x="0.0" y="667" width="374" height="30"/>
@@ -72,11 +75,14 @@
                                             <constraint firstAttribute="height" constant="30" id="ZBD-1D-bGd"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="20" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-OQ-30f">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-OQ-30f">
                                         <rect key="frame" x="-2" y="707" width="378" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iqN-q6-FPd"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oJy-a2-s85"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-Py-OZG">
                                         <rect key="frame" x="0.0" y="767" width="374" height="51"/>
@@ -85,6 +91,9 @@
                                             <constraint firstAttribute="height" constant="51" id="bnR-oH-2Vl"/>
                                         </constraints>
                                         <state key="normal" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ue-Rr-CHA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -98,6 +107,12 @@
                             <constraint firstItem="8tu-gg-M06" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xDd-7U-0Bh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="height" destination="bB1-a3-u8M" id="C3D-IM-Rp6"/>
+                        <outlet property="heightSlider" destination="n51-PT-wAn" id="vJ6-0S-3IB"/>
+                        <outlet property="weight" destination="hUA-Nz-c45" id="c50-wJ-99Q"/>
+                        <outlet property="weightSlider" destination="MEu-OQ-30f" id="PNv-hJ-Vvk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

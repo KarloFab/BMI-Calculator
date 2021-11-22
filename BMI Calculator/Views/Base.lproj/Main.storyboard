@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,30 +112,34 @@
                         <outlet property="heightSlider" destination="n51-PT-wAn" id="vJ6-0S-3IB"/>
                         <outlet property="weight" destination="hUA-Nz-c45" id="c50-wJ-99Q"/>
                         <outlet property="weightSlider" destination="MEu-OQ-30f" id="PNv-hJ-Vvk"/>
+                        <segue destination="8eO-JS-sJY" kind="presentation" identifier="goToResult" id="400-gf-cWF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controler-->
         <scene sceneID="cuF-Y0-kna">
             <objects>
-                <viewController id="8eO-JS-sJY" sceneMemberID="viewController">
+                <viewController id="8eO-JS-sJY" customClass="ResultViewControler" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eUB-AO-dmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-PE-whI">
-                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <rect key="frame" x="20" y="758" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7m3-5A-OL9"/>
                                 </constraints>
-                                <state key="normal" title="Calculate"/>
+                                <state key="normal" title="Recalculate"/>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="8eO-JS-sJY" eventType="touchUpInside" id="xTq-Ae-2ws"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kpp-J2-vcx">
-                                <rect key="frame" x="97.5" y="386" width="219" height="124"/>
+                                <rect key="frame" x="97.5" y="359" width="219" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbM-nD-SuK">
                                         <rect key="frame" x="30" y="0.0" width="159.5" height="30"/>
@@ -168,6 +172,10 @@
                             <constraint firstItem="zFY-PE-whI" firstAttribute="trailing" secondItem="eUB-AO-dmN" secondAttribute="trailingMargin" id="zct-VK-ZOb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="r5f-gW-WVp" id="9ep-zJ-CDG"/>
+                        <outlet property="resultLabel" destination="XRk-Xx-va4" id="NK6-l7-SeC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLJ-nV-7tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
